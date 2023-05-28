@@ -1,7 +1,7 @@
 {
   "qa_academy": {
-    "email": "qatest010822@gmail.com",
-    "password": "fjvcwerncfbquntc",
+    "email": "",
+    "password": "",
     "server": "smtp.gmail.com",
     "port": 465
   }
