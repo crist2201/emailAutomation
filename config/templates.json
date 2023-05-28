@@ -1,0 +1,7 @@
+{
+  "config": {
+    "template": "certificates",
+    "path": "resources/templates/",
+    "data" : "Certificados 5.0 QA - AT"
+  }
+}

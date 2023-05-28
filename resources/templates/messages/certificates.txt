@@ -1,0 +1,24 @@
+Subject: Certificado {COURSE}
+
+Estimado {NAME_CERTIFICATE},
+
+A nombre de QA-Cademy queremos felicitarte por haber logrado completar satisfactoriamente el curso {COURSE}. Agradecemos la confianza y el habernos elegido como sus mentores, esperamos tenerte en próximas oportunidades en los futuros cursos especializados. Podrás descargar tu certificado en el siguiente url:
+
+- {CREDENTIAL_URL}
+
+Para vincular tu certificado con tu cuenta en LinkedIn, por favor sigue los siguientes pasos:
+
+- https://www.youtube.com/watch?v=VDLX3Iy58qM
+
+Credential ID: {CREDENTIAL_ID}
+
+Credential URL: {CREDENTIAL_URL}
+
+Por favor síguenos en nuestras redes sociales:
+
+YouTube: https://www.youtube.com/channel/UCpzRBCfDtqJ4olLsWh2sHhA
+LinkedIn : https://www.linkedin.com/company/qa-cademy
+Facebook: https://www.facebook.com/QA-Cademy-100252728153868/
+
+Deseando éxitos en su vida profesional, nos despedimos atentamente.
+QA-Cademy
