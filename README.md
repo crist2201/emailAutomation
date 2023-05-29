@@ -16,6 +16,8 @@ $ cd emailAutomation
 $ pip install -r requirements.txt
 ```
 # Usage
+
+### Go to the project directory and run the following command
 ```
 # Run the main file
 $ python main.py
