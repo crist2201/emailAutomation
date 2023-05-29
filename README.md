@@ -1,6 +1,6 @@
 # emailAutomationProject
 
-This python project has the goal to send emails to different email addresses.
+This python project can send emails based on any template to different email addresses. 
 
 # Installation
 
