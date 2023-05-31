@@ -1,13 +1,12 @@
 import smtplib
 import ssl
+from src import file_factory
+from src import words_template
+from src import message_template
+from src import data_template
 
-import file_factory
-import words_template
-import message_template
-import data_template
 
-
-class Email():
+class Email:
 
     def __init__(self):
         super().__init__()
@@ -43,6 +42,3 @@ class Email():
             else:
                 print(str.format("Email sent to {email_address}", email_address=row['EMAIL']))
                 self.message = message_template.Message().get_clean_message()
-
-
-

@@ -4,9 +4,9 @@ import pandas as pd
 
 class Files:
     def __init__(self):
-        self.properties_file = open("../config/config.properties", 'rb')
-        self.config_file = pd.read_json("../config/config.json").to_dict()
-        self.path = "../resources/templates"
+        self.properties_file = open("config/config.properties", 'rb')
+        self.config_file = pd.read_json("config/config.json").to_dict()
+        self.path = "resources/templates"
 
     def get_properties(self, prop):
         properties = Properties()
