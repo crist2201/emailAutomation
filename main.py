@@ -1,4 +1,4 @@
-import email_qa
+from src import email_qa
 
 if __name__ == '__main__':
     email_qa.Email().send_emails()
