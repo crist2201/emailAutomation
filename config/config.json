@@ -9,7 +9,7 @@
       "port": 465
     }
   },
-  "email_credentials": {
+  "user": {
     "qa_testing": {
       "email": "qatest010822@gmail.com",
       "password": "fjvcwerncfbquntc"
@@ -18,10 +18,5 @@
     "email": "qatest010822@gmail.com",
     "password": "fjvcwerncfbquntc"
     }
-  },
-  "templates": {
-    "message": "certificates",
-    "data" : "Certificados 5.0 QA - AT",
-    "path": "resources/templates/"
   }
 }
