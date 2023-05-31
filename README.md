@@ -17,7 +17,7 @@ $ pip install -r requirements.txt
 ```
 # Usage
 ### The first step is configure your email credentials. In order to perform this task follow the next steps:
-1. Go to ```config/email.json```
+1. Go to ```config/config.json```
 2. Set your ```email```
 3. Set your ```password```. You have to create an app password: https://support.google.com/accounts/answer/185833?hl=en
 ### Then go to the project directory and run the following command
