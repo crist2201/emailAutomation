@@ -26,6 +26,6 @@ $ pip install -r requirements.txt
 ```$ python main.py```
 ### In order to change the template files, follow the next steps:
 1. Go to ```resources/templates```
-2. Add your message template to ```messages``` folder
-3. Add your data/clientes template to ```data``` folder
-4. Add your words to replace template to ```replaceWords``` folder.
+2. Add your ```message template``` to ```messages``` folder
+3. Add your ```data/clientes template``` to ```data``` folder
+4. Add your ```words to replace template``` to ```replaceWords``` folder.
