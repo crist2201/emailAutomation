@@ -1,0 +1,27 @@
+{
+  "environment": {
+    "gmail": {
+      "port": 465,
+      "server": "smtp.gmail.com"
+    },
+    "outlook": {
+      "server": "smtp.gmail.com",
+      "port": 465
+    }
+  },
+  "email_credentials": {
+    "qa_testing": {
+      "email": "qatest010822@gmail.com",
+      "password": "fjvcwerncfbquntc"
+    },
+    "qa_academy": {
+    "email": "qatest010822@gmail.com",
+    "password": "fjvcwerncfbquntc"
+    }
+  },
+  "templates": {
+    "message": "certificates",
+    "data" : "Certificados 5.0 QA - AT",
+    "path": "resources/templates/"
+  }
+}
