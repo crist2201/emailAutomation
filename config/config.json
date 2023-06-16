@@ -1,5 +1,5 @@
 {
-  "environment": {
+  "service": {
     "gmail": {
       "port": 465,
       "server": "smtp.gmail.com"
@@ -12,7 +12,7 @@
   "user": {
     "qa_testing": {
       "email": "qatest010822@gmail.com",
-      "password": ""
+      "password": "fjvcwerncfbquntc"
     },
     "qa_academy": {
     "email": "qatest010822@gmail.com",

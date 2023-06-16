@@ -3,14 +3,16 @@ from src import file_factory
 import os
 
 
-class Data(file_factory.Files):
+class Data:
 
     def __init__(self):
-        super().__init__()
-        self.data_template = self.get_properties("data_template")
-        self.data_path = os.path.join(self.path, "data/{name_file}.xlsx")
+        pass
+        #super().__init__()
+        #self.data_template = self.get_properties("data_template")
+        #self.data_path = os.path.join(self.path, "data/{name_file}.xlsx")
 
-    def get_users_data(self):
+    @staticmethod
+    def get_users_data(file_name, path):
         data_header = 2
-        data_file = str.format(self.data_path, name_file=self.data_template)
+        data_file = str.format(path, name_file=file_name)
         return pd.read_excel(data_file, header=data_header)

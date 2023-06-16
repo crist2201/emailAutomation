@@ -1,22 +1,43 @@
-from src import file_factory
 import os
 import re
 
 
-class Message(file_factory.Files):
+class Message:
 
     def __init__(self):
-        super().__init__()
-        self.message_template = self.get_properties("message_template")
-        self.message_path = os.path.join(self.path, "messages/{name_file}.txt")
+        """
+        Constructor, only init the file path
+        """
+        self.message_path = 'resources/templates/messages/{name_file}.txt'
 
-    def get_template_message(self):
-        message_file = str.format(self.message_path, name_file=self.message_template)
+    def open_template_message(self, file_name):
+        """
+        Function to get the message template
+        :param file_name: File name
+        :param path: File path
+        :return: Message txt
+        """
+        print(os.path.dirname(file_name))
+        message_file = str.format(self.message_path, name_file=file_name)
         return open(message_file, encoding="utf-8").read()
 
-    def get_clean_message(self):
+    @staticmethod
+    def get_clean_message(message):
+        """
+        Function to remove curly braces from message template
+        :param message: Txt file to remove curly braces
+        :return: Txt file without curly braces
+        """
         remove_braces = r'[{}]'
         empty = ""
-        return re.sub(remove_braces, empty, self.get_template_message())
+        return re.sub(remove_braces, empty, message)
 
-
+    @staticmethod
+    def get_words_to_replace(message):
+        """
+        Function to get the words to replace from the message template
+        :param message: Txt file
+        :return: List with all the words to replace
+        """
+        words_between_braces = r'{(.*?)}'
+        return re.findall(words_between_braces, message)

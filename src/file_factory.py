@@ -1,22 +1,31 @@
-from jproperties import Properties
 import pandas as pd
+from src import properties
 
 
 class Files:
     def __init__(self):
-        self.properties_file = open("config/config.properties", 'rb')
+        """
+        Constructor
+        :param properties: Get all the properties
+        :param config_file: All the configurations
+        """
+        self.properties = properties.Properties()
         self.config_file = pd.read_json("config/config.json").to_dict()
-        self.path = "resources/templates"
 
-    def get_properties(self, prop):
-        properties = Properties()
-        properties.load(self.properties_file)
-        return properties.get(prop).data
-
-    def get_environment(self):
-        env = self.get_properties("environment")
-        return self.config_file["environment"][env]
+    def get_service(self):
+        """
+        Function to get service properties
+        :return: Dictionary with the properties
+        """
+        service = self.properties.service
+        return self.config_file["service"][service]
 
     def get_email_credentials(self):
-        credentials = self.get_properties("user")
+        """
+        Function to get email credentials
+        :return: Dictionary with the credentials
+        """
+        credentials = self.properties.admin
         return self.config_file["user"][credentials]
+
+
