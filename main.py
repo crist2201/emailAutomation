@@ -1,16 +1,7 @@
-from src import email_qa, message_template, properties, file_factory
+from src import email_automation
 
 if __name__ == '__main__':
-    f = file_factory.Files()
-    m = message_template.Message()
-    r = m.open_template_message(f.properties.message)
-    print(r)
+    qa_academy_email_automation = email_automation.EmailAutomation()
+    qa_academy_email_automation.send_emails()
 
-    #x = properties.Properties()
-    #print(x.message)
-    #s=message_template.Message().replace_data()
-    #print(s)
-    #x= email_qa.Email().send_emails()
-    #email_qa.Email().send_emails()
-    #email_qa.Email().close_instance()
 

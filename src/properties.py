@@ -11,7 +11,7 @@ class Properties:
         Function to set the service to use: Gmail or other
         :return: Service selected
         """
-        return input("Service to use (Email): ").lower()
+        return input("Service to use (Gmail): ").lower()
 
     @staticmethod
     def set_admin_user():

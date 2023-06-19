@@ -1,4 +1,3 @@
-import os
 import re
 
 
@@ -10,19 +9,17 @@ class Message:
         """
         self.message_path = 'resources/templates/messages/{name_file}.txt'
 
-    def open_template_message(self, file_name):
+    def get_template_message(self, file_name):
         """
         Function to get the message template
         :param file_name: File name
-        :param path: File path
         :return: Message txt
         """
-        print(os.path.dirname(file_name))
         message_file = str.format(self.message_path, name_file=file_name)
         return open(message_file, encoding="utf-8").read()
 
     @staticmethod
-    def get_clean_message(message):
+    def clean_message(message):
         """
         Function to remove curly braces from message template
         :param message: Txt file to remove curly braces
