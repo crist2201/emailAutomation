@@ -17,7 +17,7 @@ class Files:
         """
         return self.config_file["service"][service]
 
-    def get_email_credentials(self, credentials):
+    def get_admin_credentials(self, credentials):
         """
         Function to get email credentials
         :return: Dictionary with the credentials

@@ -1,9 +1,24 @@
 class Properties:
     def __init__(self):
-        self.service = self.set_service()
-        self.admin = self.set_admin_user()
-        self.message = self.set_message_template()
-        self.users_data = self.set_users_data()
+        self.properties = self.set_properties()
+        self.service = self.properties[0].lower()
+        self.admin = self.properties[1].lower()
+        self.template = self.properties[2]
+        self.version = self.properties[3]
+        self.message = self.properties[4]
+        self.users_data = self.properties[5]
+        self.sheet = self.properties[6].upper()
+        self.path = self.set_path(self.version, self.template)
+
+    @staticmethod
+    def set_properties():
+        properties = input("Set properties (service, user, template, version, message, data, course):")
+        return properties.title().replace(" ", "").split(",")
+
+    @staticmethod
+    def set_path(version, template):
+        path = 'resources/templates/Version {version}/{template}/'
+        return str.format(path, version=version, template=template)
 
     @staticmethod
     def set_service():

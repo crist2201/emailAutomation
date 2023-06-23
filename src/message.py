@@ -1,4 +1,5 @@
 import re
+import os
 
 
 class Message:
@@ -7,15 +8,16 @@ class Message:
         """
         Constructor, only init the file path
         """
-        self.message_path = 'resources/templates/messages/{name_file}.txt'
+        self.message_path = '{file}.txt'
 
-    def get_template_message(self, file_name):
+    def get(self, path, file_name):
         """
         Function to get the message template
+        :param path: Path files
         :param file_name: File name
         :return: Message txt
         """
-        message_file = str.format(self.message_path, name_file=file_name)
+        message_file = str.format(os.path.join(path, self.message_path), file=file_name)
         return open(message_file, encoding="utf-8").read()
 
     @staticmethod
@@ -30,7 +32,7 @@ class Message:
         return re.sub(remove_braces, empty, message)
 
     @staticmethod
-    def get_words_to_replace(message):
+    def get_words(message):
         """
         Function to get the words to replace from the message template
         :param message: Txt file
